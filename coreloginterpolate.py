@@ -31,7 +31,7 @@ def interpolate_core_with_log(
     field_names = core_column_names + log_column_names_copy
 
     # Open CSV Writer & Interpolate Each Core Data Row from Log Table
-    with open("output/" + output_filename, "w") as wf:
+    with open("output/" + output_filename, "w", newline="") as wf:
         writer = csv.DictWriter(wf, fieldnames=field_names)
         writer.writeheader()
 
