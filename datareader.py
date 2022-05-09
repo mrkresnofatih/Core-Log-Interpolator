@@ -25,8 +25,8 @@ def read_data(file_name, column_names):
 
         for i in range(0, row_count):
             line = rd.readline()
-            temp = np.array(line.split(), dtype=float)
+            temp = np.array(line.split())
             for index, val in enumerate(column_indices):
-                container[i][index] = temp[val]
+                container[i][index] = float(temp[val])
 
     return container

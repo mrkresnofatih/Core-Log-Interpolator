@@ -1,11 +1,6 @@
-import coreloginterpolate as cli
+import generate_porosity_dataset as gpd
 
-cli.interpolate_core_with_log(
-    "T1-GRH2.txt",
-    ["DEPTH", "KHINF", "KHAIR", "PORHE", "KVINF"],
-    0,
-    "L1-GRH2.txt",
-    ["DEPTH", "CLI", "DCOR", "GR", "LLD", "LLD"],
-    0,
-    "M1-GRH2.csv"
-)
+# POROSITY PREDICTION
+# Collect PORHE & PORFLU As Output, RHOB & NPHI As Input
+# Note: ASDJ10 does not have a RHOB data. So just skip for this specific well
+gpd.execute()
